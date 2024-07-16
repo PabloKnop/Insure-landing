@@ -1,0 +1,36 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+:root{
+--cor0 : white;
+--cor1 : hsl(0, 0%, 98%);
+--cor2 : hsl(273, 4%, 51%);
+--cor3 : hsl(270, 9%, 17%);
+}
+
+.cor0 {
+  color: var(--cor0);
+}
+.cor1 {
+  color: var(--cor1);
+}
+.cor2 {
+  color: var(--cor2);
+}
+.cor3 {
+  color: var(--cor3);
+}
+
+
+
