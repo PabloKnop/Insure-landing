@@ -1,0 +1,98 @@
+main{
+background-color: var(--cor4);
+padding: 0px 20px;
+box-shadow: inset 0px -100px var(--cor1);
+position: relative;
+}
+
+.container{
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding-top: 100px;
+  position: relative;
+}
+
+.container div{
+ display: grid;
+ gap: 20px;
+ align-content: center;
+ padding-bottom: 250px;
+ max-width: 700px;
+}
+
+#imagem-principal{
+  object-fit: cover;
+  width: 100%;
+  min-height: 600px;
+}
+
+.container div h1{
+  position: relative;
+}
+
+.container div h1::before{
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 30%;
+  top: -30px;
+  background-color: var(--cor2);
+}
+
+
+.container h1, p {
+  color: var(--cor1);
+}
+
+.container p{
+  line-height: 2rem;
+}
+
+
+#botao-dos-planos{
+  z-index: 999;
+  text-transform: uppercase;
+  color: var(--cor0);
+  padding: 10px 20px;
+  border: 1px solid var(--cor0);
+  justify-self: start;
+  transition: all 0.5s ease;
+}
+
+#botao-dos-planos:hover{
+  background-color: black;
+  border-color: black;
+  transform: scale(1.15);
+
+ 
+}
+
+main::after{
+  content: "";
+  background-image: url(../imagens/bg-pattern-intro-right-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
+  width: 30vw;
+  height: 70vh;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+main::before{
+  content: "";
+  background-image: url(../imagens/bg-pattern-intro-left-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: contain;
+  width: 30vw;
+  height: 70vh;
+  position: absolute;
+  left: 0px;
+  bottom: -190px;
+}

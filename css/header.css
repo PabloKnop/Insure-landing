@@ -1,3 +1,42 @@
 header{
+  padding: 0px 20px;
+}
 
+header nav {
+  max-width: 1440px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+header nav ul { 
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+header nav ul li a{
+  display: block;
+  text-transform: uppercase;
+  transition: 0.5s ease-out; 
+  text-wrap: nowrap;
+}
+
+header nav ul li a:hover{
+  color: var(--cor3);
+}
+
+header nav ul li:nth-child(4) a{
+  border: 1px solid var(--cor3);
+  padding: 15px 30px;
+  transition: none;
+}
+
+header nav ul li:nth-child(4) a:hover{
+  background-color: var(--cor3);
+  padding: 15px 30px;
+  color: var(--cor1);
 }

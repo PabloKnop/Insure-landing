@@ -17,6 +17,8 @@ img {
 --cor1 : hsl(0, 0%, 98%);
 --cor2 : hsl(273, 4%, 51%);
 --cor3 : hsl(270, 9%, 17%);
+--cor4 : hsl(256, 26%, 20%);
+--cor5 : hsl(216, 30%, 68%);
 }
 
 .cor0 {
@@ -31,6 +33,32 @@ img {
 .cor3 {
   color: var(--cor3);
 }
+.cor4 {
+  color: var(--cor4);
+}
+.cor5 {
+  color: var(--cor5);
+}
+
+
+.font1-grande{
+  font: 400 4.5rem/5rem "DM Serif Display", serif;
+  letter-spacing: 1px;
+}
+
+
+.font1{
+  font: 400 1rem/1.0rem "DM Serif Display", serif;
+  letter-spacing: 1px;
+}
+
+.font2{
+  font: 400 1rem/0.9 "Karla", Arial;
+}
+
+
+
+
 
 
 
