@@ -9,32 +9,50 @@
 </head>
 <body>
   <header>
-    <nav>
-      <picture>
-        <img src="imagens/logo.svg" alt="logo do header">
-      </picture>
+    <picture>
+      <img src="imagens/logo.svg" alt="logo do header">
+    </picture>
+    <nav class="desktop-nav">
       <ul>
         <li>
-          <a class="font1 cor2" href="http://">how we work</a>
+          <a class="font1-pequena cor2" href="http://">how we work</a>
         </li>
         <li>
-          <a class="font1 cor2" href="http://">blog</a>
+          <a class="font1-pequena cor2" href="http://">blog</a>
         </li>
         <li>
-          <a class="font1 cor2" href="http://">account</a>
+          <a class="font1-pequena cor2" href="http://">account</a>
         </li>
         <li>
-          <a class="font1 cor2" href="http://">view plans</a>
+          <a class="font1-pequena cor2" href="http://">view plans</a>
         </li>
       </ul>
     </nav>
+    <nav class="mobile__nav">
+      <ul>
+        <li>
+          <a class="font1-pequena cor2" href="http://">how we work</a>
+        </li>
+        <li>
+          <a class="font1-pequena cor2" href="http://">blog</a>
+        </li>
+        <li>
+          <a class="font1-pequena cor2" href="http://">account</a>
+        </li>
+        <li>
+          <a class="font1-pequena cor2" href="http://">view plans</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="open"></button>
+    <button class="close"></button>
   </header>
   <main>
     <section class="container">
       <div>
         <h1 class="font1-grande">Humanizing your insurance.</h1>
-        <p class="font1">Get your life insurance coverage easier and faster. We blend our expertise and technology to help you find the plan that’s right for you. Ensure you and your loved ones are protected.</p>
-        <a class="font2" id="botao-dos-planos" href="http://">view plans</a>
+        <p class="font1-pequena">Get your life insurance coverage easier and faster. We blend our expertise and technology to help you find the plan that’s right for you. Ensure you and your loved ones are protected.</p>
+        <a class="font2 botao"  href="http://">view plans</a>
       </div>
       <picture>
         <img id="imagem-principal" src="imagens/image-intro-desktop.jpg" alt="imagem-principal">
@@ -47,21 +65,85 @@
       <ul>
         <li>
           <img src="imagens/icon-snappy-process.svg" alt="snappy image">
-          <h2>Snappy Process</h2>
-          <p>Our application process can be completed in minutes, not hours. Don’t get stuck filling in tedious forms.</p>
+          <h2 class="font1-media">Snappy Process</h2>
+          <p class="font1-pequena">Our application process can be completed in minutes, not hours. Don’t get stuck filling in tedious forms.</p>
         </li>
         <li>
           <img src="imagens/icon-affordable-prices.svg" alt="prices image">
-          <h2>Affordable Prices</h2>
-          <p>We don’t want you worrying about high monthly costs. Our prices may be low, but we still offer the best coverage possible.</p>
+          <h2 class="font1-media">Affordable Prices</h2>
+          <p class="font1-pequena">We don’t want you worrying about high monthly costs. Our prices may be low, but we still offer the best coverage possible.</p>
         </li>
         <li>
           <img src="imagens/icon-people-first.svg" alt="people image">
-          <h2>People First</h2>
-          <p>Our plans aren’t full of conditions and clauses to prevent payouts. We make sure you’re covered when you need it.</p>
+          <h2 class="font1-media">People First</h2>
+          <p class="font1-pequena">Our plans aren’t full of conditions and clauses to prevent payouts. We make sure you’re covered when you need it.</p>
         </li>
       </ul>
     </div>
+    <div class="find-work">
+      <h3 class="font1-grande">Find out more about how we work</h3>
+      <a class="font2 botao" href="http://">how we work</a>
+    </div>
   </section>
+  <footer>
+    <div class="container-do-footer">
+      <div class="redes">
+        <picture>
+          <img src="imagens/logo.svg" alt="logo footer">
+        </picture>
+        <ul>
+          <li><a href="http://"><img src="imagens/icon-instagram.svg" alt=""></a></li>
+          <li><a href="http://"><img src="imagens/icon-facebook.svg" alt=""></a></li>
+          <li><a href="http://"><img src="imagens/icon-pinterest.svg" alt=""></a></li>
+          <li><a href="http://"><img src="imagens/icon-twitter.svg" alt=""></a></li>
+        </ul>
+      </div>
+      <div class="more font1-pequena">
+        <ul>
+          <li>our company</li>
+          <li><a href="http://">how we work</a></li>
+          <li><a href="http://">why insure?</a></li>
+          <li><a href="http://">view plans</a></li>
+          <li><a href="http://">reviews</a></li>
+        </ul>
+        <ul>
+          <li>help me</li>
+          <li><a href="http://">faq</a></li>
+          <li><a href="http://">terms of use</a></li>
+          <li><a href="http://">privacy policy</a></li>
+          <li><a href="http://">cookies</a></li>
+        </ul>
+        <ul>
+          <li>contact</li>
+          <li><a href="http://">sales</a></li>
+          <li><a href="http://">support</a></li>
+          <li><a href="http://">live chat</a></li>
+        </ul>
+        <ul>
+          <li>others</li>
+          <li><a href="http://">careers</a></li>
+          <li><a href="http://">press</a></li>
+          <li><a href="http://">license</a></li>
+        </ul>
+      </div>
+      <p>Challenge by Frontend Mentor. Coded by Momoh Abdulsamad.</p>
+    </div>
+  </footer>
+  <script>
+    const open_btn = document.querySelector('.open');
+    const close_btn = document.querySelector('.close');
+    
+    open_btn.addEventListener('click', () => {
+    document.querySelector('.open').style.display = 'none';
+    document.querySelector('.close').style.display = 'inline';
+    document.querySelector('.mobile__nav').style.display = 'block';
+    });
+    
+    close_btn.addEventListener('click', () => {
+    document.querySelector('.open').style.display = 'inline';
+    document.querySelector('.close').style.display = 'none';
+    document.querySelector('.mobile__nav').style.display = 'none';
+    });
+  </script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 main{
 background-color: var(--cor4);
 padding: 0px 20px;
-box-shadow: inset 0px -100px var(--cor1);
+box-shadow: inset 0px -100px var(--cor0);
 position: relative;
 }
 
@@ -22,12 +22,13 @@ position: relative;
  align-content: center;
  padding-bottom: 250px;
  max-width: 700px;
+ padding-top: 30px;
 }
 
 #imagem-principal{
   object-fit: cover;
   width: 100%;
-  min-height: 600px;
+  min-height: 580px;
 }
 
 .container div h1{
@@ -44,7 +45,8 @@ position: relative;
 }
 
 
-.container h1, p {
+.container div h1, 
+.container div p {
   color: var(--cor1);
 }
 
@@ -67,8 +69,6 @@ position: relative;
   background-color: black;
   border-color: black;
   transform: scale(1.15);
-
- 
 }
 
 main::after{
@@ -95,4 +95,89 @@ main::before{
   position: absolute;
   left: 0px;
   bottom: -190px;
+}
+
+@media (max-width:770px){
+  .container{
+    max-width: 375px;
+    margin: 0 auto;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    gap: 0px;
+    position: relative;
+    text-align: center;
+    padding-top: 0px;
+  }
+
+  .container div{
+    display: grid;
+    gap: 20px;
+    align-content: center;
+    padding: 30px 20px;
+    max-width: 375px;
+    height: 450px;
+    box-sizing: border-box;
+    grid-area: 2;
+    background-color: var(--cor4);
+    position: relative;
+   }
+
+   .container div h1::before{
+    display: none;
+  }
+
+  .container div h1{
+    position: relative;
+    font-size: 2.7rem;
+    line-height: 2.5rem;
+    z-index: 1;
+  }
+  
+  .container p{
+    line-height: 1.5rem;
+    z-index: 1;
+  }
+
+  .container div p {
+    color: var(--cor5);
+  }
+  
+  main{
+    background-color: var(--cor0);
+    padding: 0px 20px;
+  }
+
+  .container div::after{
+    content: "";
+    background-image: url(../imagens/bg-pattern-intro-left-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+    width: 30vw;
+    height: 30vh;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  
+  .container div::before{
+    content: "";
+    background-image: url(../imagens/bg-pattern-intro-right-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    width: 50vw;
+    height: 40vh;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+  }
+
+  main::after{
+    display: none;
+  }
+  
+  main::before{
+    display: none;
+  }
 }

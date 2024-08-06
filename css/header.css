@@ -1,8 +1,4 @@
-header{
-  padding: 0px 20px;
-}
-
-header nav {
+header {
   max-width: 1440px;
   height: 100px;
   margin: 0 auto;
@@ -10,33 +6,120 @@ header nav {
   justify-content: space-between;
   align-items: center;
   gap: 50px;
+  padding: 0px 20px;
 }
 
-header nav ul { 
+header picture{
+  display: inline-block;
+  min-width: max-content;
+}
+
+.desktop-nav ul { 
   display: flex;
   gap: 30px;
   align-items: center;
 }
 
-header nav ul li a{
+.desktop-nav ul li a{
   display: block;
   text-transform: uppercase;
   transition: 0.5s ease-out; 
   text-wrap: nowrap;
 }
 
-header nav ul li a:hover{
+.desktop-nav ul li a:hover{
   color: var(--cor3);
 }
 
-header nav ul li:nth-child(4) a{
+.desktop-nav ul li:nth-child(4) a{
   border: 1px solid var(--cor3);
   padding: 15px 30px;
   transition: none;
 }
 
-header nav ul li:nth-child(4) a:hover{
+.desktop-nav ul li:nth-child(4) a:hover{
   background-color: var(--cor3);
   padding: 15px 30px;
   color: var(--cor1);
 }
+
+.mobile__nav{
+  display: none;
+}
+.open{
+  display: none;
+}
+.close{
+  display: none;
+}
+
+@media (max-width:770px){
+  header {
+    max-width: 375px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 0px 20px;
+    position: relative;
+  }
+  .desktop-nav {
+    display: none;
+  }
+
+  .open{
+    display: block;
+    background-image: url(../imagens/icon-hamburger.svg);
+    background-position: center;
+    width: 32px;
+    height: 32px;
+  }
+
+  .close{
+    background-image: url(../imagens/icon-close.svg);
+    background-position: center;
+    width: 32px;
+    height: 32px;
+  }
+
+  .mobile__nav{
+    position: absolute;
+    z-index: 1;
+    width: 375px;
+    height: 580px;
+    background-color: var(--cor3);
+    background-image: url(../imagens/bg-pattern-mobile-nav.svg);
+    background-repeat: no-repeat;
+    background-position:bottom;
+    background-size: contain;
+    top: 60px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    display: none;
+  }
+
+  .mobile__nav ul{
+    padding-top: 70px;
+    display: grid;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .mobile__nav ul li a:hover{
+   transition: all 0.5s ease;
+   border: 1px solid white;
+   padding: 10px 10px;
+   display: inline-block;
+  }
+
+  .mobile__nav ul li a{
+    text-transform: uppercase;
+    text-wrap: nowrap;
+    color: var(--cor0);
+  }
+}
+
